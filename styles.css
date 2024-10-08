@@ -1,0 +1,241 @@
+/* CSS Variables for Light and Dark Mode */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --border-color: #000;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --border-color: #ffffff;
+}
+
+/* Global Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.theme-toggle:hover {
+    background-color: #218838;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    font-family: 'Indie Flower', cursive;
+}
+
+.image-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-section img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid #ff6600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.section-box {
+    flex-basis: 33.33%;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    box-sizing: border-box;
+}
+
+h2.section-title, h3.section-title {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects ul li {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.projects ul li:last-child {
+    border-bottom: none;
+}
+
+/* Work Experience Section */
+.work-experience div {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-experience div:last-child {
+    border-bottom: none;
+}
+
+/* Reviews Section */
+.reviews {
+    text-align: center;
+}
+
+.review-card {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+    background-color: var(--background-color);
+}
+
+.review-card p {
+    margin: 5px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.contact-form-section h1 {
+    font-size: 2.5em;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .section-box {
+        flex-basis: 100%;
+    }
+
+    .review-card {
+        width: 90%;
+    }
+}
